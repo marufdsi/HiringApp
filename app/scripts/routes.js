@@ -23,6 +23,9 @@ app.states = {
             'header@jobs': {
                 templateUrl: 'templates/headerNav.html'
             },
+            'searchWidget@jobs': {
+                templateUrl: 'templates/jobs/recruitment-search.html'
+            },
             'content@jobs': {
                 templateUrl: 'templates/jobs/jobs.html',
                 controller: 'jobsCtrl'

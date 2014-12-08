@@ -6,12 +6,18 @@
     1. Initializing values
     2. Customizing elements
         a. Header & banner
+    3. Common
 */ 
 
 
 //  1. Initializing Values
+@body_bg_color: #f6f6f6;
 @header_bd_color: #FFF;
 @banner_image: '../images/banner.jpg';
+@link_color: #0074c5;
+@content_container_bg: #FFF;
+@content_container_border_color: #e5e5e5;
+@red_heading: #800012;
 
 
 
@@ -20,14 +26,45 @@
 *    1. Header & banners  
 *       a. header & banner
 */
-#header{
-    height: 89px;
+body{
+    background: @body_bg_color;
+}
+#header{    
     background: @header_bd_color;
     border-bottom: none;
     margin: 0px;
+}
+.navbar-header{
+    height: 89px;
+}
+.navbar-toggle{
+    margin-top: 25px;
 }
 .banner{
     background: url(@banner_image) repeat-x;
     width: 100%;
     height: 203px;
+    margin-bottom: 30px;
+}
+a{
+    color: @link_color !important;
+}
+
+//  3. Commons
+.content-container{
+    background: @content_container_bg;
+    border: solid 1px @content_container_border_color;
+    padding: 10px 0px;
+}
+
+.recruitment-search{
+    padding: 5px 10px;
+}
+
+h4.red_heading{
+    color: @red_heading !important;
+}
+
+.square-btn{
+    border-radius: 0px;
 }
