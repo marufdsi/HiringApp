@@ -1,0 +1,24 @@
+/* 
+    Created on : Dec 8, 2014, 1:40:58 PM
+    Author     : Yeasin
+
+    Index
+    1. Initializing values
+    2. Customizing elements
+        a. Header & banner
+*/
+/*
+*    1. Header & banners  
+*       a. header & banner
+*/
+#header {
+  height: 89px;
+  background: #ffffff;
+  border-bottom: none;
+  margin: 0px;
+}
+.banner {
+  background: url('../images/banner.jpg') repeat-x;
+  width: 100%;
+  height: 203px;
+}
