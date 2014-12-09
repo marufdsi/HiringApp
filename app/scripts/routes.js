@@ -41,6 +41,10 @@ app.states = {
             'content@job': {
                 templateUrl: 'templates/jobs/job.html',
                 controller: 'jobCtrl'
+            },
+            'sidebar@job': {
+                templateUrl: 'templates/sidebar/jobSidebar.html',
+                controller: 'jobCtrl'
             }
         }
     },
