@@ -17,11 +17,17 @@
 @content_container_bg: #FFF;
 @content_container_border_color: #e5e5e5;
 @red_heading: #800012;
+@seperator_border_dark_color: #aaaaaa;
+@seperator_border_light_color: #e6e9db;
+@dark_gray: #616161;
+@light_gray: #8e8e8e;
+@blue: #0074c5;
 
 
 
 
 //  2. Customizing elements
+
 /*
 *    1. Header & banners  
 *       a. header & banner
@@ -60,7 +66,7 @@ body{
     padding: 5px 10px;
 }
 
-h4.red_heading{
+.red_heading{
     color: @red_heading !important;
 }
 
@@ -81,4 +87,39 @@ h4.red_heading{
 
 .margin-bottom-10{
     margin-bottom: 10px
+}
+
+.margin-left-0{
+    margin-left: 0px
+}
+
+.margin-right-0{
+    margin-right: 0px
+}
+.margin-top-0{
+    margin-top: 0px
+}
+
+.margin-bottom-0{
+    margin-bottom: 0px
+}
+
+.seperator-border-dark{
+    border-bottom: solid 1px @seperator_border_dark_color
+}
+
+.seperator-border-light{
+    border-bottom: solid 1px @seperator_border_light_color
+}
+
+.dark_gray{
+    color: @dark_gray
+}
+
+.light_gray{
+    color: @light_gray
+}
+
+.blue{
+    color: @blue
 }

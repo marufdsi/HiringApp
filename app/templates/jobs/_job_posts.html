@@ -1,0 +1,54 @@
+<div class="col-md-12 col-lg-12 col-sm-12 margin-bottom-10 margin-top-10">
+    <div class="dropdown pull-left">
+        <a href="javascript:void(0)" class="dropdown-toggle" id="dropdownMenu1" aria-expanded="true">
+            View all departments
+            <span><i class="fa fa-chevron-down"></i></span>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li>
+                <a href>Development</a>
+                <a href>Human Resource</a>
+            </li>
+        </ul>
+    </div>
+    <div class="dropdown pull-right">
+        <a href="javascript:void(0)" class="dropdown-toggle" id="dropdownMenu1" aria-expanded="true">
+            Sort By Date
+            <span><i class="fa fa-chevron-down"></i></span>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li>
+                <a href>Date</a>
+                <a href>Recruit End date</a>
+            </li>
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+
+<div class="col-md-12 col-lg-12 col-sm-12" ng-repeat="j in jobs">
+    <h4 class="dark_gray margin-top-10">{{j.date}}</h4><hr class="seperator-border-dark"/>
+    
+    <div class="col-md-12 col-lg-12 col-sm-12 seperator-border-light margin-bottom-10" ng-repeat="posts in j.jobs">
+        <div class="col-md-8 col-lg-8">
+            <h4 class="margin-top-0">
+                <a href="#job/{{posts.id}}">{{posts.job_title}}</a>                
+            </h4>
+            <strong>{{posts.department}}</strong>
+            <p class="light_gray margin-bottom-0">Posted: {{posts.post_date}}</p>
+            <p class="light_gray margin-bottom-0">Recruit Ends on: {{posts.end_date}}</p>
+            <p class="light_gray margin-bottom-0">Job posted by: <a href="javascript:void(0)">{{posts.posted_by}}</a></p>
+            <p class="light_gray">
+                Interviewers: 
+                <a href="" ng-repeat="i in posts.interviewer">{{i.name}}, </a>
+            </p>
+        </div>
+        <div class="col-md-4 col-lg-4 hidden-xs hidden-sm">
+            <p class="margin-bottom-10"><a href="javascript:void(0)"><strong>{{posts.interviewed}}</strong> Interviewed</a></p>
+            <p class="margin-bottom-0 margin-top-10"><a href="javascript:void(0)"><strong>{{posts.called_for_interview}}</strong> called for interview</a></p>
+            <p class="margin-bottom-0"><a href="javascript:void(0)"><strong>{{posts.recommended}}</strong> Recommended</a></p>
+            <p class="margin-bottom-0"><a href="javascript:void(0)">total {{posts.total_applicant}} applicants</a></p>
+        </div>        
+    </div>
+</div>

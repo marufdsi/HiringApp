@@ -1,5 +1,10 @@
-//var app = angular.module('myApp', ['ui.bootstrap', 'ui.router']);
 var app = angular.module('myApp', ['ui.bootstrap', 'ui.router']);
+
+app.run(['$rootScope', function($rootScope){
+    $rootScope.$on("$stateChangeStart", function(event, toState) {                
+        console.log( toState.authentication );                
+    });
+}]);
 
 app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($stateProvider, $urlRouterProvider, $httpProvider) {
 
