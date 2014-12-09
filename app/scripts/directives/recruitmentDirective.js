@@ -2,7 +2,7 @@ app.directive('recruitmentSearch', function(){
     
     return {
         'restrict': 'EA',
-        templateUrl: 'templates/jobs/recruitment-search.html'
+        templateUrl: 'templates/directives/recruitment-search.html'
     }
     
 });

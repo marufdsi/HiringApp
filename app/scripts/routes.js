@@ -25,7 +25,12 @@ app.states = {
             },            
             'content@jobs': {
                 templateUrl: 'templates/jobs/jobs.html',
-                controller: 'jobsCtrl'
+                controller: 'jobsCtrl',
+                resolve: {
+                    jobs: function(jobsService){                        
+                        return jobsService.load();
+                    }
+                }
             }
         }
     },
