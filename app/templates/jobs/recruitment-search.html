@@ -1,24 +1,26 @@
-<div class="col-md-12 content-container">
+<div class="col-md-12 content-container margin-bottom-10">
     <div class="col-md-4">
         <h4 class="red_heading">Recruitments</h4> 
     </div>
     <div class="col-md-8">
-        <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-            <input type="text" name="search" class="recruitment-search">
-            <button class="btn btn-primary square-btn"><i class="glyphicon glyphicon-search"></i></button>
-        </div>
+        <button class="btn btn-primary square-btn pull-right">Recommend Candidate</button>
         
-        <div class="btn-group">
+        <div class="btn-group pull-right margin-right-10">
             <button type="button" class="btn btn-primary dropdown-toggle square-btn" data-toggle="dropdown" aria-expanded="false">
                 New Position <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Create New</a></li>
-                <li><a href="#">Create from template</a></li>                                
+                <li><a href="javascript:void(0)">Create New</a></li>
+                <li><a href="javascript:void(0)">Create from template</a></li>                                
             </ul>
         </div>
         
-        <button class="btn btn-primary square-btn">Recommend Candidate</button>
+        <div class="form-search pull-right margin-right-10">
+            <div class="input-append"> 
+                <input type="text" name="q" class="span2 search-query recruitment-search" placeholder="Snipp or Tag"/><button type="submit" class="btn btn-primary square-btn"><i class="glyphicon glyphicon-search"></i></button> 
+            </div>
+        </div>        
+        <div class="clearfix"></div>
         
     </div>    
 </div>
