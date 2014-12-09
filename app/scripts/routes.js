@@ -10,7 +10,8 @@ app.states = {
                 templateUrl: 'templates/headerNav.html'
             },
             'content@index': {
-                templateUrl: 'templates/login.html'
+                templateUrl: 'templates/login.html',
+                controller: 'loginCtrl'
             }
         }
     },

@@ -16,12 +16,11 @@ body {
   background: #f6f6f6;
 }
 #header {
-  background: #ffffff;
   border-bottom: none;
   margin: 0px;
 }
 .navbar-header {
-  height: 89px;
+  height: 78px;
 }
 .navbar-toggle {
   margin-top: 25px;
