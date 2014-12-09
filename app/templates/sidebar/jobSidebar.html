@@ -1,4 +1,47 @@
 
-<div style="display:inline-block; min-height:290px;" class="pull-right">
-    <datepicker ng-model="dt" min-date="minDate" show-weeks="false" class="well well-sm"></datepicker>
+<div class="notificationSidebar">
+    <div class="row whitte-background">
+        <div ng-show="{{job.recruitDateChange}}" class="col-md-12 col-xs-12 fateYellowBackground darkbrown small-top-padding" >
+            <p>Changed</p> 
+        </div>
+        <div class="col-md-12  col-xs-12">
+            <div class="pull-left recruitOn"><p>Recruit ends on</p></div>
+            <div class="pull-right changeRecruit"><a href="">Change</a></div>
+        </div>
+        <div class="col-md-12 col-xs-12 recruit-date">{{job.recruitDate}}</div>
+    </div>
+    
+    <div class="row whitte-background small-top-margin">
+        <div class="col-md-12 col-xs-12">
+            <div class="pull-left recruitOn"><p>Interviewers</p></div>
+            <div class="pull-right changeRecruit"><a href=""><span class="glyphicon glyphicon-plus"></span> Add</a></div>
+        </div>
+        <div class="col-md-12 col-xs-12">
+            <span ng-repeat="interviewer in interviewers" class="small-right-padding">
+                <img src="{{interviewer.image}}" class="interviewerImage"><a href="">{{interviewer.name}}</a>
+            </span>
+        </div>
+    </div>
+    <div class="row whitte-background small-top-margin">
+        <div ng-show="{{question.newQuestion}}" class="col-md-12 col-xs-12 fateYellowBackground darkbrown small-top-padding" >
+            <p>{{question.newQuestion}} New Question Added</p> 
+        </div>
+        <div class="col-md-12 col-xs-12">
+            <div class="pull-left recruitOn"><a href="">Questionnaires</a></div>
+            <div class="pull-right changeRecruit"><button class="btn btn-primary btnQuestionnaries"><span class="glyphicon glyphicon-play"></span></button></div>
+        </div>
+        <div class="col-md-12 iterviewQuestion">{{question.totalQuestion}} Questions</div>
+    </div>
+    
+    <div class="row whitte-background small-top-margin">
+        <div ng-show="{{candidates.newCandidate}}" class="col-md-12 col-xs-12 fateYellowBackground darkbrown small-top-padding" >
+            <p>{{candidates.newCandidate}} New Candidates Applied</p> 
+        </div>
+        <div class="col-md-12 col-xs-12">
+            <div class="pull-left recruitOn"><a href="">Candidates</a></div>
+            <div class="pull-right changeRecruit"><button class="btn btn-primary btnQuestionnaries"><span class="glyphicon glyphicon-play"></span></button></div>
+        </div>
+        <div class="col-md-12 iterviewQuestion">{{candidates.selectedCandidate}} selected for interview</div>
+    </div>
+    
 </div>

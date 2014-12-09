@@ -49,7 +49,7 @@ app.states = {
             },
             'sidebar@job': {
                 templateUrl: 'templates/sidebar/jobSidebar.html',
-                controller: 'jobCtrl'
+                controller: 'sidebarCtrl'
             }
         }
     },
