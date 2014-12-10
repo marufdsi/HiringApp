@@ -1,30 +1,16 @@
 
-app.controller('sidebarCtrl', ['$scope', '$http', function($scope, $http){
-    $scope.job = {
-        "recruitDate" : "May 15, 2015",
-        "recruitDateChange": "true"
-    };
-    $scope.interviewers = [
-        {
-            "name"          : "John Doe",
-            "image"         : "assets/images/profile1.jpeg"    
-        },
-        {
-            "name"          : "John Doe",
-            "image"         : "assets/images/profile2.jpeg"    
-        },
-        {
-            "name"          : "John Doe",
-            "image"         : "assets/images/profile3.jpeg"    
-        }];
-    $scope.question = {
-        "totalQuestion"     : "15",
-        "newQuestion"       : "2"
-    };
-    $scope.candidates = {
-        "selectedCandidate"     : "5",
-        "newCandidate"       : "4"
-    };
+app.controller('sidebarCtrl', ['$scope', '$http', '$stateParams', 'jobs', function($scope, $http, $stateParams, jobs){
+    var jobscollection = jobs.data.data;
+    var myJob;
+    $.each(jobscollection, function(index, jobs){
+        $.each(jobscollection[index].jobs, function(ind, value){
+            if(jobscollection[index].jobs[ind].id == $stateParams.jobID){
+                myJob = value;
+                return;
+            }
+        });
+    });
+    $scope.job = myJob;
     
 }]);
 

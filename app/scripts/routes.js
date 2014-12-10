@@ -50,7 +50,27 @@ app.states = {
             },
             'sidebar@job': {
                 templateUrl: 'templates/sidebar/jobSidebar.html',
-                controller: 'sidebarCtrl'
+                controller: 'sidebarCtrl',
+                resolve: {
+                    jobs: function(jobsService){                        
+                        return jobsService.load();
+                    }
+                }
+            }
+        }
+    },
+    'questionnaries': {
+        url: '/job/:jobID/questionnaries',
+        views: {
+            '': {                
+                templateUrl: 'templates/layout/main.html'
+            },
+            'header@questionnaries': {
+                templateUrl: 'templates/headerNav.html'
+            },
+            'content@questionnaries': {
+                templateUrl: 'templates/questionnaires/questionnaires.html',
+                controller: 'questionnairesCtrl'
             }
         }
     },
