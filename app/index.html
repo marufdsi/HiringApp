@@ -20,12 +20,17 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-route.min.js"></script>        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.2/ui-bootstrap.min.js"></script>        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.2/ui-bootstrap-tpls.min.js"></script>        
-        
+        <script src="scripts/vendors/moment.js"></script>        
+        <script src="scripts/vendors/jquery.eventCalendar.min.js"></script>                
         
         <!-- build:css assets/css/style.min.css -->
             <link rel="stylesheet" href="assets/css/style.css">
             <link rel="stylesheet" href="assets/css/result.css">
         <!-- /build -->
+        
+        <!-- Vendor Stylesheets -->
+        <link rel="stylesheet" href="assets/css/eventCalendar.css">
+        <link rel="stylesheet" href="assets/css/eventCalendar_theme_responsive.css">
     </head>
     <body>        
             
@@ -36,17 +41,23 @@
 
         
         <!-- build:js scripts/built.min.js-->            
+            
             <script src="scripts/app.js"></script>
             <script src="scripts/routes.js"></script>
+            
+            <!-- factories -->
             <script src="scripts/factories/factories.js"></script>
+            <script src="scripts/factories/appConfigFactory.js"></script>
             
             <!-- services -->
             <script src="scripts/services/jobsService.js"></script>
+            <script src="scripts/services/candidatesService.js"></script>
             
             <!-- directives -->
             <script src="scripts/directives/callenderDirective.js"></script>
             <script src="scripts/directives/recruitmentDirective.js"></script>
             <script src="scripts/directives/particularJobDirective.js"></script>
+            <script src="scripts/directives/candidateDirective.js"></script>
             
             
             <!-- Controllers -->
@@ -54,6 +65,7 @@
             <script src="scripts/controllers/jobsCtrl.js"></script>
             <script src="scripts/controllers/jobCtrl.js"></script>
             <script src="scripts/controllers/sidebarCtrl.js"></script>
+            <script src="scripts/controllers/candidatesCtrl.js"></script>
         <!-- /build -->
         
     </body>

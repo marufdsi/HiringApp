@@ -74,4 +74,24 @@ app.states = {
             }
         }
     },
+    'candidates': {
+        url: '/candidates',
+        views: {
+            '': { 
+                templateUrl: 'templates/layout/main.html' 
+            },
+            'header@candidates': {
+                templateUrl: 'templates/headerNav.html'
+            },
+            'content@candidates': {
+                templateUrl: 'templates/candidates/candidates.html',
+                controller: 'candidatesCtrl',
+                resolve: {
+                    candidatesResolve: function( candidatesService ){                                                
+                        return candidatesService.load();                        
+                    }
+                }
+            }
+        }
+    }
 };

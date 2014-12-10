@@ -72,6 +72,12 @@ body {
 .margin-bottom-0 {
   margin-bottom: 0px;
 }
+.border-light {
+  border-color: #e6e9db;
+}
+.border-dark {
+  border-color: #aaaaaa;
+}
 .seperator-border-dark {
   border-bottom: solid 1px #aaaaaa;
 }
@@ -86,4 +92,14 @@ body {
 }
 .blue {
   color: #0074c5;
+}
+.green {
+  color: #4e9100;
+}
+.resume {
+  background: url(../images/sprite.png) no-repeat scroll 0px 0px;
+  padding: 2px 20px;
+}
+.yellow_bg {
+  background-color: #ffffda;
 }

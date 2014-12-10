@@ -148,3 +148,7 @@
     background: #0b6087;
     color: #fff
 }
+.candidate-recommender li{
+    display: inline-block;
+    margin-right: 10px;
+}

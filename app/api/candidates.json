@@ -1,0 +1,87 @@
+{
+    "data": [
+        {
+            "rank": "12",
+            "candidate_name": "Dave James",
+            "candidate_photo": "1.jpg",
+            "candidate_email": "davejames@somedomain.com",
+            "department": "Human Resource Manager",
+            "Resume": "Resume",
+            "total_score": "3/10",
+            "answered": "4/15",
+            "questionaries": [
+                {
+                    "question": "How many years of Experience?",
+                    "answer": "5 Years"
+                },
+                {
+                    "question": "On the scale of 1 to 10, how would you mark your skill on something?",
+                    "answer": "4"
+                },
+                {
+                    "question": "Are you willing to work on odd hours?",
+                    "answer": "I don't mind"
+                }
+            ],
+            "recommended_by": [
+                {
+                    "recommender_id": 1,
+                    "recommender_name": "John Doe",
+                    "recommender_image": "1.jpg"
+                },
+                {
+                    "recommender_id": 2,
+                    "recommender_name": "Sara Jones",
+                    "recommender_image": "2.jpg"
+                }
+            ],
+            "comments": [
+                {
+                    "commenter_id": 1,
+                    "commenter_name": "Steve Jobs"
+                },
+                {
+                    "commenter_id": 2,
+                    "commenter_name": "Jeorge Harrison"
+                }
+            ]
+        },
+        {
+            "rank": "7",
+            "candidate_name": "David Mark",
+            "candidate_photo": "2.jpg",
+            "candidate_email": "davejames@somedomain.com",
+            "department": "Human Resource Manager",
+            "Resume": false,
+            "total_score": "3/10",
+            "answered": "4/15",
+            "questionaries": [
+                {
+                    "question": "How many years of Experience?",
+                    "answer": "5 Years"
+                },
+                {
+                    "question": "On the scale of 1 to 10, how would you mark your skill on something?",
+                    "answer": "4"
+                },
+                {
+                    "question": "Are you willing to work on odd hours?",
+                    "answer": "I don't mind"
+                }
+            ],
+            "recommended_by": [
+                {
+                    "recommender_id": 1,
+                    "recommender_name": "John Doe",
+                    "recommender_image": "1.jpg"
+                },
+                {
+                    "recommender_id": 2,
+                    "recommender_name": "Sara Jones",
+                    "recommender_image": "2.jpg"
+                }
+            ],
+            "comments": []
+        }
+    ]
+}

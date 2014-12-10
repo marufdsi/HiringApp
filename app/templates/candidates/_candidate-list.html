@@ -1,0 +1,70 @@
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+    
+    <div class="row margin-bottom-10 seperator-border-light" ng-repeat="c in candidates">
+        
+        <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <span class="pull-left light_gray margin-right-10 hidden-xs hidden-sm">#{{c.rank}}</span>
+                <img src="{{candidate_image_dir}}{{c.candidate_photo}}">
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <h4>
+                    <span class="light_gray margin-right-10 hidden-md hidden-lg">#{{c.rank}}</span>
+                    <a href="javascript:void(0)">{{c.candidate_name}}</a>
+                </h4>
+                <a href="javascript:void(0)">{{c.candidate_email}}</a>
+                <p class="margin-bottom-0">For <span class="red_heading">{{c.department}}</span></p>
+                <div class="margin-bottom-0">
+                    <div ng-if='c.Resume == false'>
+                        <span class="resume">Not available</span>
+                    </div>
+                    <div ng-if='c.Resume != false'>
+                        <a href="{{candidate_resume_dir}}{{c.Resume}}" class="resume">Resume</a>
+                    </div>
+                </div>
+                
+                <p class="margin-top-10 margin-bottom-0 green">TOTAL SCORE: <strong>{{c.total_score}}</strong></p>
+                <p class="margin-bottom-0 light_gray">
+                    <strong>{{c.answered}}</strong> answers
+                </p>
+            </div>
+            
+        </div>
+        <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <ul>
+                    <li ng-repeat="q in c.questionaries">
+                        <p class="margin-bottom-0 light_gray">{{q.question}}</p>
+                        <p class="margin-bottom-0">
+                            <strong class="dark_gray">{{q.answer}}</strong>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <button class="btn btn-primary square-btn pull-right">Set appointment</button>
+                <div class="clearfix"></div>
+                <div class="row margin-top-10 margin-right-10">
+                    <a href="javascript:void(0)" class="center-block text-right">Recommand for interview</a>  
+                    <p class="margin-bottom-0 text-right light_gray">
+                        <strong>Recommended by</strong>
+                    </p>
+                    <ul class="candidate-recommender">
+                        <li ng-repeat="r in c.recommended_by">
+                            <img src="{{profile_icon}}{{r.recommender_image}}">
+                            <a href="javascript:void(0)">{{r.recommender_name}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix margin-bottom-10"></div>
+        </div>
+        <div class="clearfix margin-bottom-10"></div>
+        
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 yellow_bg">
+            add Comment
+        </div>
+        
+    </div>
+    
+</div>

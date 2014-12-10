@@ -20,7 +20,9 @@
 @seperator_border_light_color: #e6e9db;
 @dark_gray: #616161;
 @light_gray: #8e8e8e;
+@green: #4e9100;
 @blue: #0074c5;
+@yellow_bg: #ffffda;
 
 
 
@@ -102,6 +104,14 @@ body{
     margin-bottom: 0px
 }
 
+.border-light{
+    border-color: @seperator_border_light_color
+}
+
+.border-dark{
+    border-color: @seperator_border_dark_color
+}
+
 .seperator-border-dark{
     border-bottom: solid 1px @seperator_border_dark_color
 }
@@ -120,4 +130,17 @@ body{
 
 .blue{
     color: @blue
+}
+
+.green{
+    color: @green
+}
+
+.resume{
+    background: url(../images/sprite.png) no-repeat scroll 0px 0px;        
+    padding: 2px 20px;    
+}
+
+.yellow_bg{
+    background-color: @yellow_bg;
 }
