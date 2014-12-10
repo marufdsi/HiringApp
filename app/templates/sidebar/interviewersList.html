@@ -1,0 +1,9 @@
+<div class="col-md-12 col-xs-12">
+    <div class="pull-left recruitOn"><p>Interviewers</p></div>
+    <div class="pull-right changeRecruit"><a href=""><span class="glyphicon glyphicon-plus"></span> Add</a></div>
+</div>
+<div class="col-md-12 col-xs-12">
+    <span ng-repeat="interviewer in job.interviewer" class="small-right-padding">
+        <img src="{{interviewer.image}}" class="interviewerImage"><a href="">{{interviewer.name}}</a>
+    </span>
+</div>

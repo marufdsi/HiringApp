@@ -14,17 +14,25 @@
 					"recommended" : 15,
 					"total_applicant" : 123,
 					"interviewer" : [{
-							"id" : 1,
-							"name" : "John Doe"
+							"id"    : 1,
+							"name"  : "John Doe",
+                                                        "image" : "assets/images/profile1.jpeg"
 						}, {
-							"id" : 2,
-							"name" : "Marry Jones"
+							"id"    : 2,
+							"name"  : "Marry Jones",
+                                                        "image" : "assets/images/profile2.jpeg"
 						}, {
-							"id" : 3,
-							"name" : "John Abraham"
+							"id"    : 3,
+							"name"  : "John Abraham",
+                                                        "image" : "assets/images/profile3.jpeg"
 						}
 					],
-					"notifications" : 4
+					"notifications"     : 4,
+                                        "totalQuestion"     : 15,
+                                        "newQuestion"       : 2,
+                                        "selectedCandidate" : 5,
+                                        "newCandidate"      : 4,
+                                        "recruitDateChange": "true"
 				},
 				{
 					"id" : 2,
@@ -39,24 +47,32 @@
 					"recommended" : 15,
 					"total_applicant" : 123,
 					"interviewer" : [{
-							"id" : 1,
-							"name" : "John Doe"
+							"id"    : 1,
+							"name"  : "John Doe",
+                                                        "image" : "assets/images/profile1.jpeg"
 						}, {
-							"id" : 2,
-							"name" : "Marry Jones"
+							"id"    : 2,
+							"name"  : "Marry Jones",
+                                                        "image" : "assets/images/profile2.jpeg"
 						}, {
-							"id" : 3,
-							"name" : "John Abraham"
+							"id"    : 3,
+							"name"  : "John Abraham",
+                                                        "image" : "assets/images/profile3.jpeg"
 						}
 					],
-					"notifications" : 4
+					"notifications"     : 4,
+                                        "totalQuestion"     : 15,
+                                        "newQuestion"       : 2,
+                                        "selectedCandidate" : 5,
+                                        "newCandidate"      : 4,
+                                        "recruitDateChange": "true"
 				}
 			]
 		},
 		{
 			"date" : "September 2015",
 			"jobs" : [{
-					"id" : 1,
+					"id" : 3,
 					"job_title" : "Human Resource Manager",
 					"department" : "HR Department",
 					"post_date" : "May 12, 2015",
@@ -68,20 +84,28 @@
 					"recommended" : 15,
 					"total_applicant" : 123,
 					"interviewer" : [{
-							"id" : 1,
-							"name" : "John Doe"
+							"id"    : 1,
+							"name"  : "John Doe",
+                                                        "image" : "assets/images/profile1.jpeg"
 						}, {
-							"id" : 2,
-							"name" : "Marry Jones"
+							"id"    : 2,
+							"name"  : "Marry Jones",
+                                                        "image" : "assets/images/profile2.jpeg"
 						}, {
-							"id" : 3,
-							"name" : "John Abraham"
+							"id"    : 3,
+							"name"  : "John Abraham",
+                                                        "image" : "assets/images/profile3.jpeg"
 						}
 					],
-					"notifications" : 4
+					"notifications"     : 4,
+                                        "totalQuestion"     : 15,
+                                        "newQuestion"       : 2,
+                                        "selectedCandidate" : 5,
+                                        "newCandidate"      : 4,
+                                        "recruitDateChange": "true"
 				},
 				{
-					"id" : 2,
+					"id" : 4,
 					"job_title" : "Human Resource Manager",
 					"department" : "HR Department",
 					"post_date" : "May 12, 2015",
@@ -93,17 +117,25 @@
 					"recommended" : 15,
 					"total_applicant" : 123,
 					"interviewer" : [{
-							"id" : 1,
-							"name" : "John Doe"
+							"id"    : 1,
+							"name"  : "John Doe",
+                                                        "image" : "assets/images/profile1.jpeg"
 						}, {
-							"id" : 2,
-							"name" : "Marry Jones"
+							"id"    : 2,
+							"name"  : "Marry Jones",
+                                                        "image" : "assets/images/profile2.jpeg"
 						}, {
-							"id" : 3,
-							"name" : "John Abraham"
+							"id"    : 3,
+							"name"  : "John Abraham",
+                                                        "image" : "assets/images/profile3.jpeg"
 						}
 					],
-					"notifications" : 4
+					"notifications"     : 4,
+                                        "totalQuestion"     : 15,
+                                        "newQuestion"       : 2,
+                                        "selectedCandidate" : 5,
+                                        "newCandidate"      : 4,
+                                        "recruitDateChange": "true"
 				}
 			]
 		}

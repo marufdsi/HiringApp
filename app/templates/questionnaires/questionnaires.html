@@ -1,0 +1,20 @@
+    
+<div top-questionnaires-content></div>   
+<div class="row whitte-background">
+    <div class="col-sm-12 col-xs-12 padding-top">
+        <h3 class="darkbrown position-header">For the post of "Human Resources Manager</h3>
+        <hr>
+    </div>
+    <hr>
+    <div class="col-sm-12 col-xs-12">
+        <p>#1 How many years of experience you have on the field of "Human Resources"?</p>
+        <input type="text"/> years
+        <hr>
+    </div>
+    
+    <div class="col-sm-12 col-xs-12 padding-bottom">
+        <p>#2 On the scale of 1 to 10, how would you mark your skill on something?"</p>
+        <rating class="big-font" ng-model="rate" max="max" on-leave="overStar = null"></rating>
+        <span class="big-font">| {{rate}}</span>
+    </div>
+</div>
