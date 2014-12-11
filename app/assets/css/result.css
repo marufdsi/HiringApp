@@ -5,7 +5,9 @@
     Index
     1. Initializing values
     2. Common & utility classes
-    3. Customizing elements        
+    3. Customizing elements      
+        a. Headers & banners
+        b. Modals
 */
 /*
 *    2. Common & utility classes
@@ -108,7 +110,7 @@ select.ng-dirty.ng-invalid {
   border: solid 1px #ff0000;
 }
 /*
-*    1. Header & banners  
+*    a. Header & banners  
 */
 body {
   background: #f6f6f6;
@@ -128,4 +130,11 @@ body {
   width: 100%;
   height: 203px;
   margin-bottom: 30px;
+}
+/*
+    b. Modals
+*/
+.custom-modal-header {
+  background: #60b200;
+  color: #ffffff;
 }

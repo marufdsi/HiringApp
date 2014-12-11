@@ -1,4 +1,5 @@
-app.controller('candidatesCtrl', ['$scope', 'candidatesResolve', 'appConfigFactory', function( $scope, candidatesResolve, appConfigFactory ){    
+app.controller('candidatesCtrl', ['$scope', 'candidatesResolve', 'appConfigFactory', '$modal', function( $scope, candidatesResolve, appConfigFactory, $modal ){    
+    'use strict';
     
     $scope.candidates = candidatesResolve.data.data;
     $scope.max = 10;
@@ -8,7 +9,16 @@ app.controller('candidatesCtrl', ['$scope', 'candidatesResolve', 'appConfigFacto
     $scope.profile_icon = appConfigFactory.PROFILE_ICON;
     
     
-    $scope.recommendModal = function( candidate ){
-        console.log( candidate );
-    }
+    $scope.recommendModal = function( candidate ){        
+        app.candidate = candidate;
+        $modal.open({
+            templateUrl: 'templates/candidates/recommend-candidate-modal.html',            
+            controller: ['$scope', function( $scope ){
+                $scope.candidate = app.candidate;
+                $scope.ok = function(){
+                    alert('OK');
+                }
+            }]
+        });
+    };
 }]);

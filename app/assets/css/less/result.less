@@ -5,7 +5,9 @@
     Index
     1. Initializing values
     2. Common & utility classes
-    3. Customizing elements        
+    3. Customizing elements      
+        a. Headers & banners
+        b. Modals
 */ 
 
 
@@ -24,6 +26,8 @@
 @yellow_bg: #ffffda;
 @rating-yollow: #ffcc00;
 @error: #ff0000;
+@modal_header_bg: #60b200;
+@modal_header_font_color: #FFF;
 
 
 /*
@@ -159,7 +163,7 @@ input.ng-dirty.ng-invalid, select.ng-dirty.ng-invalid{
 //  3. Customizing elements
 
 /*
-*    1. Header & banners  
+*    a. Header & banners  
 */
 body{
     background: @body_bg_color;
@@ -181,3 +185,11 @@ body{
     margin-bottom: 30px;
 }
 
+
+/*
+    b. Modals
+*/
+.custom-modal-header{
+    background: @modal_header_bg;
+    color: @modal_header_font_color;
+}
