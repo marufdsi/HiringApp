@@ -7,7 +7,7 @@ app.states = {
                 templateUrl: 'templates/layout/main.html'
             },
             'header@index': {
-                templateUrl: 'templates/headerNav.html'
+                templateUrl: 'templates/common/headerNav.html'
             },
             'content@index': {
                 templateUrl: 'templates/login.html',
@@ -22,13 +22,13 @@ app.states = {
                 templateUrl: 'templates/layout/main.html'
             },
             'header@jobs': {
-                templateUrl: 'templates/headerNav.html'
+                templateUrl: 'templates/common/headerNav.html'
             },            
             'content@jobs': {
                 templateUrl: 'templates/jobs/jobs.html',
                 controller: 'jobsCtrl',
                 resolve: {
-                    jobs: function(jobsService){                        
+                    jobs: function(jobsService){                          
                         return jobsService.load();
                     }
                 }
@@ -42,7 +42,7 @@ app.states = {
                 templateUrl: 'templates/layout/main.html'
             },
             'header@job': {
-                templateUrl: 'templates/headerNav.html'
+                templateUrl: 'templates/common/headerNav.html'
             },
             'content@job': {
                 templateUrl: 'templates/jobs/job.html',
@@ -66,7 +66,7 @@ app.states = {
                 templateUrl: 'templates/layout/main.html'
             },
             'header@questionnaries': {
-                templateUrl: 'templates/headerNav.html'
+                templateUrl: 'templates/common/headerNav.html'
             },
             'content@questionnaries': {
                 templateUrl: 'templates/questionnaires/questionnaires.html',
@@ -81,7 +81,7 @@ app.states = {
                 templateUrl: 'templates/layout/main.html' 
             },
             'header@candidates': {
-                templateUrl: 'templates/headerNav.html'
+                templateUrl: 'templates/common/headerNav.html'
             },
             'content@candidates': {
                 templateUrl: 'templates/candidates/candidates.html',

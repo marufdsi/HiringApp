@@ -5,7 +5,7 @@
         <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                 <span class="pull-left light_gray margin-right-10 hidden-xs hidden-sm">#{{c.rank}}</span>
-                <img src="{{candidate_image_dir}}{{c.candidate_photo}}" class="border-all border-dark">
+                <img src="{{candidate_image_dir}}{{c.candidate_photo}}" class="border-all border-dark img-responsive">
             </div>
             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                 <h4>
@@ -32,7 +32,7 @@
         </div>
         <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                <ul>
+                <ul class="padding-left-0">
                     <li ng-repeat="q in c.questionaries">
                         <p class="margin-bottom-0 light_gray">{{q.question}}</p>
                         <p class="margin-bottom-0">
@@ -50,8 +50,8 @@
                     <p class="margin-bottom-0 text-right light_gray">
                         <strong>Recommended by</strong>
                     </p>
-                    <ul class="candidate-recommender">
-                        <li ng-repeat="r in c.recommended_by">
+                    <ul class="candidate-recommender padding-left-0">
+                        <li ng-repeat="r in c.recommended_by" class="margin-bottom-10">
                             <img src="{{profile_icon}}{{r.recommender_image}}">
                             <a href="javascript:void(0)">{{r.recommender_name}}</a>
                         </li>

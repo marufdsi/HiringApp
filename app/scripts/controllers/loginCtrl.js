@@ -1,10 +1,12 @@
-app.controller('loginCtrl', ['$scope', function( $scope ){
+app.controller('loginCtrl', ['$scope', 'authService', function( $scope, authService ){
     
     $scope.signin = function( form ){       
         
+        form.submitted = true;
         if( form.$valid ){
-            alert('Valid');
-        }        
+            console.log( $scope.login );
+            authService.logIn( $scope.login );
+        }                   
     }
     
 }]);

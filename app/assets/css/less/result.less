@@ -4,9 +4,8 @@
 
     Index
     1. Initializing values
-    2. Customizing elements
-        a. Header & banner
-    3. Common
+    2. Common & utility classes
+    3. Customizing elements        
 */ 
 
 
@@ -24,38 +23,11 @@
 @blue: #0074c5;
 @yellow_bg: #ffffda;
 @rating-yollow: #ffcc00;
+@error: #ff0000;
 
-
-
-
-//  2. Customizing elements
 
 /*
-*    1. Header & banners  
-*       a. header & banner
-*/
-body{
-    background: @body_bg_color;
-}
-#header{        
-    border-bottom: none;
-    margin: 0px;
-}
-.navbar-header{
-    height: 78px;
-}
-.navbar-toggle{
-    margin-top: 25px;
-}
-.banner{
-    background: url(@banner_image) repeat-x;
-    width: 100%;
-    height: 203px;
-    margin-bottom: 30px;
-}
-
-/*
-*    3. Commons
+*    2. Common & utility classes
 */
 .content-container{
     background: @content_container_bg;
@@ -97,12 +69,29 @@ body{
 .margin-right-0{
     margin-right: 0px
 }
+
 .margin-top-0{
     margin-top: 0px
 }
 
 .margin-bottom-0{
     margin-bottom: 0px
+}
+
+.padding-left-0{
+    padding-left: 0px
+}
+
+.padding-right-0{
+    padding-right: 0px
+}
+
+.padding-top-0{
+    padding-top: 0px
+}
+
+.padding-bottom-0{
+    padding-bottom: 0px
 }
 
 .border-all{
@@ -157,3 +146,38 @@ body{
 .padding-10{
     padding: 10px;
 }
+
+.error{
+    color: @error
+}
+
+input.ng-dirty.ng-invalid, select.ng-dirty.ng-invalid{
+    border: solid 1px @error;
+}
+
+
+//  3. Customizing elements
+
+/*
+*    1. Header & banners  
+*/
+body{
+    background: @body_bg_color;
+}
+#header{        
+    border-bottom: none;
+    margin: 0px;
+}
+.navbar-header{
+    height: 78px;
+}
+.navbar-toggle{
+    margin-top: 25px;
+}
+.banner{
+    background: url(@banner_image) repeat-x;
+    width: 100%;
+    height: 203px;
+    margin-bottom: 30px;
+}
+
