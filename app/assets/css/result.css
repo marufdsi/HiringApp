@@ -72,6 +72,9 @@ body {
 .margin-bottom-0 {
   margin-bottom: 0px;
 }
+.border-all {
+  border: solid 1px;
+}
 .border-light {
   border-color: #e6e9db;
 }
@@ -102,4 +105,10 @@ body {
 }
 .yellow_bg {
   background-color: #ffffda;
+}
+.rating-yollow {
+  color: #ffcc00;
+}
+.padding-10 {
+  padding: 10px;
 }

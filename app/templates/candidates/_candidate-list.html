@@ -5,7 +5,7 @@
         <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                 <span class="pull-left light_gray margin-right-10 hidden-xs hidden-sm">#{{c.rank}}</span>
-                <img src="{{candidate_image_dir}}{{c.candidate_photo}}">
+                <img src="{{candidate_image_dir}}{{c.candidate_photo}}" class="border-all border-dark">
             </div>
             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                 <h4>
@@ -36,7 +36,8 @@
                     <li ng-repeat="q in c.questionaries">
                         <p class="margin-bottom-0 light_gray">{{q.question}}</p>
                         <p class="margin-bottom-0">
-                            <strong class="dark_gray">{{q.answer}}</strong>
+                            <strong class="dark_gray">{{q.answer}}</strong>                            
+                    <rating class="small-font rating-yollow" readonly="isReadonly" ng-model="q.answer" max="max" on-leave="overStar = null" ng-show="q.is_rating"></rating>
                         </p>
                     </li>
                 </ul>
@@ -45,7 +46,7 @@
                 <button class="btn btn-primary square-btn pull-right">Set appointment</button>
                 <div class="clearfix"></div>
                 <div class="row margin-top-10 margin-right-10">
-                    <a href="javascript:void(0)" class="center-block text-right">Recommand for interview</a>  
+                    <a href="javascript:void(0)" class="center-block text-right" ng-click="recommendModal(c)">Recommand for interview</a>  
                     <p class="margin-bottom-0 text-right light_gray">
                         <strong>Recommended by</strong>
                     </p>
@@ -61,8 +62,8 @@
         </div>
         <div class="clearfix margin-bottom-10"></div>
         
-        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 yellow_bg">
-            add Comment
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 fateYellowBackground padding-10 margin-bottom-10">
+            <a href="javascript:void(0)">add Comment</a>
         </div>
         
     </div>

@@ -1,6 +1,7 @@
 {
     "data": [
         {
+            "candidate_id": 1,
             "rank": "12",
             "candidate_name": "Dave James",
             "candidate_photo": "1.jpg",
@@ -12,15 +13,18 @@
             "questionaries": [
                 {
                     "question": "How many years of Experience?",
-                    "answer": "5 Years"
+                    "answer": "5 Years",
+                    "is_rating": false
                 },
                 {
                     "question": "On the scale of 1 to 10, how would you mark your skill on something?",
-                    "answer": "4"
+                    "answer": "4",
+                    "is_rating": true
                 },
                 {
                     "question": "Are you willing to work on odd hours?",
-                    "answer": "I don't mind"
+                    "answer": "I don't mind",
+                    "is_rating": false
                 }
             ],
             "recommended_by": [
@@ -47,6 +51,7 @@
             ]
         },
         {
+            "candidate_id": 2,
             "rank": "7",
             "candidate_name": "David Mark",
             "candidate_photo": "2.jpg",
@@ -58,15 +63,18 @@
             "questionaries": [
                 {
                     "question": "How many years of Experience?",
-                    "answer": "5 Years"
+                    "answer": "5 Years",
+                    "is_rating": false
                 },
                 {
                     "question": "On the scale of 1 to 10, how would you mark your skill on something?",
-                    "answer": "4"
+                    "answer": "4",
+                    "is_rating": true
                 },
                 {
                     "question": "Are you willing to work on odd hours?",
-                    "answer": "I don't mind"
+                    "answer": "I don't mind",
+                    "is_rating": false
                 }
             ],
             "recommended_by": [
