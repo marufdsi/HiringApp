@@ -82,6 +82,13 @@
      color: #939393;
      padding-bottom: 10px;
  }
+ .candidate-recommender li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.recommend-photo{
+    width: 50px;
+}
  
  /*social css*/
  .social-icon a.btn{
@@ -147,8 +154,4 @@
 .btn-linkedin:active, .btn-linkedin:hover {
     background: #0b6087;
     color: #fff
-}
-.candidate-recommender li{
-    display: inline-block;
-    margin-right: 10px;
 }

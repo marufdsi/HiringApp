@@ -13,8 +13,10 @@ app.controller('candidatesCtrl', ['$scope', 'candidatesResolve', 'appConfigFacto
         app.candidate = candidate;
         $modal.open({
             templateUrl: 'templates/candidates/recommend-candidate-modal.html',            
-            controller: ['$scope', function( $scope ){
+            controller: ['$scope', 'appConfigFactory', function( $scope, appConfigFactory ){
                 $scope.candidate = app.candidate;
+                $scope.PROFILE_THUMB = appConfigFactory.PROFILE_THUMB;
+                
                 $scope.ok = function(){
                     alert('OK');
                 }

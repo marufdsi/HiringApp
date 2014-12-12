@@ -4,11 +4,26 @@
 <div class="modal-body">
 
     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-        {{candidate.candidate_name}}
+        <div class="pull-left margin-right-10">
+            <img src="{{PROFILE_THUMB}}{{candidate.candidate_photo}}" class="recommend-photo">
+        </div>
+        <div class="pull-left">
+            <p class="margin-bottom-0">
+                <a href="javascript:void(0)">{{candidate.candidate_name}}</a>
+            </p>
+            <p class="margin-bottom-0">{{candidate.candidate_email}}</p>
+            <p class="margin-bottom-0">For <span class="red_heading">{{candidate.department}}</span></p>
+        </div>
+        <div class="clearfix"></div>
     </div>
+    <div class="col-md-12 margin-top-10">
+        <textarea class="form-control"></textarea>
+    </div>
+    
+    <div class="clearfix"></div>
     
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="ok()">OK</button>
-    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary square-btn" ng-click="ok()">OK</button>
+    <button class="btn btn-primary square-btn" ng-click="cancel()">Cancel</button>
 </div>
