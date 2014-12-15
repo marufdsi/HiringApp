@@ -1,0 +1,12 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "department_name": "HumanResource"
+        },
+        {
+            "id": 2,
+            "department_name": "Development"
+        }
+    ]
+}
