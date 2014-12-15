@@ -59,16 +59,16 @@ app.states = {
             }
         }
     },
-    'questionnaries': {
-        url: '/job/:jobID/questionnaries',
+    'questionnaires': {
+        url: '/job/:jobID/questionnaires',
         views: {
             '': {                
                 templateUrl: 'templates/layout/main.html'
             },
-            'header@questionnaries': {
+            'header@questionnaires': {
                 templateUrl: 'templates/common/headerNav.html'
             },
-            'content@questionnaries': {
+            'content@questionnaires': {
                 templateUrl: 'templates/questionnaires/questionnaires.html',
                 controller: 'questionnairesCtrl'
             }

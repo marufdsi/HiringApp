@@ -1,5 +1,5 @@
 
-app.controller('sidebarCtrl', ['$scope', '$http', '$stateParams', 'jobs', function($scope, $http, $stateParams, jobs){
+app.controller('sidebarCtrl', ['$scope', '$http', "$window", '$stateParams', 'jobs', function($scope, $http, $window, $stateParams, jobs){
     var jobscollection = jobs.data.data;
     var myJob;
     $.each(jobscollection, function(index, jobs){
@@ -10,6 +10,12 @@ app.controller('sidebarCtrl', ['$scope', '$http', '$stateParams', 'jobs', functi
             }
         });
     });
+    $scope.redirectToQuestionnaires = function(){
+        $window.location.hash = '#/job/' + $stateParams.jobID + '/questionnaires';
+    }
+    $scope.redirectToCandidates = function(){
+        $window.location.hash = '#/candidates';
+    }
     $scope.job = myJob;
     
 }]);
