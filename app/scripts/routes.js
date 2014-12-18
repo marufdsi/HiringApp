@@ -1,7 +1,8 @@
 // UI-Router states
 app.states = {
     'index': {
-        url: '/', 
+        url: '/',
+        redirectAuthenticated: true,
         views: {
             '': {                
                 templateUrl: 'templates/layout/main.html'

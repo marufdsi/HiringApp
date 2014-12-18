@@ -1,6 +1,6 @@
 app.service('userInfoService', ['baseService', function(baseService){
 	
-	baseService.service = 'userInfo1';
+	baseService.service = 'userInfo';
 
 	baseService.syncLoad = function(){
 		return $.ajax({

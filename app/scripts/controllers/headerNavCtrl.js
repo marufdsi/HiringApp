@@ -9,14 +9,14 @@ app.controller('headerNavCtrl', ['$scope', '$rootScope', 'authService',function(
 	*	Actions (click events)
 	*/
 	$scope.logout = function(){
-		authService.logOut();
+            authService.logOut();
 	};
 
 	/*
 	*	Events
 	*/
-	$rootScope.$on( $rootScope.events.LOG_OUT, function(){
-		console.log('Logget Out');
+	$rootScope.$on( $rootScope.events.LOG_OUT, function(){            
+            console.log('Logget Out');
 	});
 
 }]);

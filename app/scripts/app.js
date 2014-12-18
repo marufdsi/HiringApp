@@ -12,12 +12,17 @@ app.run(['$rootScope', '$state', 'appConfigFactory', 'eventsFactory', 'authServi
     //  Triggers upon route change
     $rootScope.$on("$stateChangeStart", function(event, toState) {                
         
-        //  If reoute requires authentication & user is not logged in redirect to login page
+        //  If route requires authentication & user is not logged in redirect to login page
         if( toState.authRequired && !authService.isLoggedIn() )  {
             event.preventDefault();
             $state.go('index');
         }
-
+        
+        //  If route cannot be viewed by authenticated user
+        else if( toState.redirectAuthenticated && authService.isLoggedIn() ){
+            event.preventDefault();
+            $state.go('jobs');
+        }
 
     });
     

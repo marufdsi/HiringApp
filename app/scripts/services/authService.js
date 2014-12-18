@@ -15,7 +15,7 @@ app.service('authService', ['$http', '$rootScope', 'userInfoService', function( 
     //  Logs out a user
     this.logOut = function(){
         localStorage.removeItem('hiring_session');
-        $rootScope.$broadcast( $rootScope.events.LOG_OUT );
+        $rootScope.$emit( $rootScope.events.LOG_OUT );
     };
     
     //  returns userinfo from localstorage

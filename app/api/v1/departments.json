@@ -1,12 +1,24 @@
 {
     "data": [
         {
+            "id": 0,
+            "department_name": "All Departments"
+        },
+        {
             "id": 1,
             "department_name": "HumanResource"
         },
         {
             "id": 2,
             "department_name": "Development"
+        },
+        {
+            "id": 3,
+            "department_name": "Marketting"
+        },
+        {
+            "id": 4,
+            "department_name": "Management"
         }
     ]
 }

@@ -1,13 +1,12 @@
 <div class="col-md-12 col-lg-12 col-sm-12 margin-bottom-10 margin-top-10">
     <div class="dropdown pull-left">
         <a href="javascript:void(0)" class="dropdown-toggle" id="dropdownMenu1" aria-expanded="true">
-            View all departments
+            {{selectedDept.department_name}}
             <span><i class="fa fa-chevron-down"></i></span>
         </a>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-            <li>
-                <a href="javascript:void(0)">Development</a>
-                <a href="javascript:void(0)">Human Resource</a>
+            <li ng-repeat="d in departments">
+                <a href="javascript:void(0)" ng-click="selectDepartment(d)">{{d.department_name}}</a>                
             </li>
         </ul>
     </div>
@@ -17,9 +16,8 @@
             <span><i class="fa fa-chevron-down"></i></span>
         </a>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-            <li>
-                <a href>Date</a>
-                <a href>Recruit End date</a>
+            <li ng-repeat="s in sortOrder">
+                <a href="javascript:void(0)" ng-click="sortBy(s)">{{s}}</a>                
             </li>
         </ul>
     </div>
