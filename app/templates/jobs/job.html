@@ -3,13 +3,13 @@
 <div class="row">
     <div class="col-sm-8 col-xs-12">
         <div class="row padding-bottom whitte-background">
-            <div class="darkbrown col-md-12 fateYellowBackground">
+            <div class="darkbrown col-md-12 fateYellowBackground" ng-show="{{job.job_update}}">
                 <h4>update</h4>
             </div>
             <div class="col-md-12">
-                <h1>Human Resource Manager</h1>
-                <h3>HR Department</h3>
-                <p>Lorem ipsum dolor sit amet, eget odio dolor, sed fusce sapien a duis etiam a, felis nulla semper, diam turpis rutrum. Gravida ligula, aliquet voluptate justo malesuada vestibulum. Ligula mus lacus. Ultrices habitasse at, libero eros dictum vitae, integer convallis sem lacus ut leo dictum. Orci rutrum interdum mollis non sed hendrerit. Molestie at suscipit, in tempor ut tellus neque, vitae mi pellentesque risus parturient purus, dolor ipsum facilisis. Tristique tellus, nec incididunt elit quisque risus, ut nisl, venenatis consequat pede exercitation. Libero ante wisi fringilla, vehicula a, tincidunt ut neque.</p>
+                <h1>{{job.job_title}}</h1>
+                <h3>{{job.department}}</h3>
+                <p>{{job.department_description}}</p>
                 
                 <div class="row">
                     <div class="col-md-12">
@@ -17,7 +17,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="link-box">
-                            <a href="">http://www.somedomain.com/somelink?id=01234</a>
+                            <a href="{{job.posting_link}}">{{job.posting_link}}</a>
                         </div>
                     </div>
                 </div>
@@ -34,12 +34,12 @@
                     </div>
                 </div>
                 
-                <div class="row">
+                <div class="row" ng-show="{{job.requirement}}">
                     <div class="col-md-12">
                         <h3>Requirements</h3>
                     </div>
                     <div class="col-md-12">
-                        <p>Lorem ipsum dolor sit amet, eget odio dolor, sed fusce sapien a duis etiam a, felis nulla semper, diam turpis rutrum. Gravida ligula, aliquet voluptate justo malesuada vestibulum. Ligula mus lacus. Ultrices habitasse at, libero eros dictum vitae, integer convallis sem lacus ut leo dictum. Orci rutrum interdum mollis non sed hendrerit. Molestie at suscipit, in tempor ut tellus neque, vitae mi pellentesque risus parturient purus, dolor ipsum facilisis. Tristique tellus, nec incididunt elit quisque risus, ut nisl, venenatis consequat pede exercitation. Libero ante wisi fringilla, vehicula a, tincidunt ut neque.</p>
+                        <p>{{job.requirements_description}}</p>
                     </div>
                 </div>
             </div>

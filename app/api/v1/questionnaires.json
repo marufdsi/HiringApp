@@ -1,0 +1,61 @@
+{
+  "Questionnaires"  : {
+    "JobID"         : "1",
+    "job_title"     : "Human Resource Manager",
+    "Questions"     : [
+                        {
+                          "QuestionName"    : "name1",
+                          "Question"        : "How many years of experience you have on the field of \"Human Resources\"?",
+                          "Input"           : [
+                                                {
+                                                  "Element" : "input",
+                                                  "Type"    : "text",
+                                                  "Label"   : "years",
+                                                  "Value"   : "",
+                                                  "Limit"   : "",
+                                                  "Score"   : "based on input number"
+                                                }
+                                               ],
+                          "Public"          : "true"
+                        },
+                        {
+                          "QuestionName"    : "name2",
+                          "Question"        : "On the scale of 1 to 10, how would you mark your skill on something?",
+                          "Input"           : [
+                                                {
+                                                  "Element" : "rating",
+                                                  "Type"    : "rating",
+                                                  "Label"   : "",
+                                                  "Value"   : 0,
+                                                  "Limit"   : "10",
+                                                  "Score"   : "based on input number"
+                                                }
+                                              ],
+                          "Public"          : "true"
+                        },
+                        {
+                          "QuestionName"    : "name3",
+                          "Question"        : "Are you willing to work on odd hours?",
+                          "Input"           : [
+                                                {
+                                                  "Element" : "input",
+                                                  "Type"    : "radio",
+                                                  "Label"   : "I don't mind",
+                                                  "Value"   : "",
+                                                  "Limit"   : "",
+                                                  "Score"   : "2"
+                                                },
+                                                {
+                                                  "Element" : "input",
+                                                  "Type"    : "radio",
+                                                  "Label"   : "prefer not to.",
+                                                  "Value"   : "",
+                                                  "Limit"   : "",
+                                                  "Score"   : "1"
+                                                }
+                                              ],
+                          "Public"          : "false"
+                        }
+    ]
+  }
+}

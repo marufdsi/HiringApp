@@ -1,0 +1,36 @@
+{
+    "data"  : {
+                "id"                        : 1,
+                "job_title"                 : "Human Resource Manager",
+                "department"                : "HR Department",
+                "post_date"                 : "May 12, 2015",
+                "end_date"                  : "May 15, 2015",
+                "posted_by"                 : "John Doe",
+                "job_update"                : "true",
+                "posted_by_user_id"         : 1,
+                "posting_link"              : "http://www.somedomain.com/somelink?id=01234",
+                "department_description"    : "Lorem ipsum dolor sit amet, eget odio dolor, sed fusce sapien a duis etiam a, felis nulla semper, diam turpis rutrum. Gravida ligula, aliquet voluptate justo malesuada vestibulum. Ligula mus lacus. Ultrices habitasse at, libero eros dictum vitae, integer convallis sem lacus ut leo dictum. Orci rutrum interdum mollis non sed hendrerit. Molestie at suscipit, in tempor ut tellus neque, vitae mi pellentesque risus parturient purus, dolor ipsum facilisis. Tristique tellus, nec incididunt elit quisque risus, ut nisl, venenatis consequat pede exercitation. Libero ante wisi fringilla, vehicula a, tincidunt ut neque.",
+                "requirement"               : "true",
+                "requirements_description"  : "Lorem ipsum dolor sit amet, eget odio dolor, sed fusce sapien a duis etiam a, felis nulla semper, diam turpis rutrum. Gravida ligula, aliquet voluptate justo malesuada vestibulum. Ligula mus lacus. Ultrices habitasse at, libero eros dictum vitae, integer convallis sem lacus ut leo dictum. Orci rutrum interdum mollis non sed hendrerit. Molestie at suscipit, in tempor ut tellus neque, vitae mi pellentesque risus parturient purus, dolor ipsum facilisis. Tristique tellus, nec incididunt elit quisque risus, ut nisl, venenatis consequat pede exercitation. Libero ante wisi fringilla, vehicula a, tincidunt ut neque.",
+                "interviewer"               : [{  
+                                                    "id"    : 1,
+                                                    "name"  : "John Doe",
+                                                    "image" : "assets/images/profile1.jpeg"
+                                                }, {
+                                                    "id"    : 2,
+                                                    "name"  : "Marry Jones",
+                                                    "image" : "assets/images/profile2.jpeg"
+                                                }, {
+                                                    "id"    : 3,
+                                                    "name"  : "John Abraham",
+                                                    "image" : "assets/images/profile3.jpeg"
+                                                }
+                                            ],
+                "notifications"             : 4,
+                "totalQuestion"             : 15,
+                "newQuestion"               : 2,
+                "selectedCandidate"         : 5,
+                "newCandidate"              : 4,
+                "recruitDateChange"         : "true"
+              }
+}
