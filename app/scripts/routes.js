@@ -47,14 +47,19 @@ app.states = {
             },
             'content@job': {
                 templateUrl: 'templates/jobs/job.html',
-                controller: 'jobCtrl'
+                controller: 'jobCtrl',
+                resolve: {
+                    job: function(jobService){                        
+                        return jobService.load();
+                    }
+                }
             },
             'sidebar@job': {
                 templateUrl: 'templates/sidebar/jobSidebar.html',
                 controller: 'sidebarCtrl',
                 resolve: {
-                    jobs: function(jobsService){                        
-                        return jobsService.load();
+                    job: function(jobService){                        
+                        return jobService.load();
                     }
                 }
             }
@@ -71,7 +76,12 @@ app.states = {
             },
             'content@questionnaires': {
                 templateUrl: 'templates/questionnaires/questionnaires.html',
-                controller: 'questionnairesCtrl'
+                controller: 'questionnairesCtrl',
+                resolve: {
+                    questions: function( questionnairesService ){                                                
+                        return questionnairesService.load();                        
+                    }
+                }
             }
         }
     },

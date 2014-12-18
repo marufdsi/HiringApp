@@ -1,20 +1,31 @@
     
 <div top-questionnaires-content></div>   
 <div class="row whitte-background">
-    <div class="col-sm-12 col-xs-12 padding-top">
-        <h3 class="darkbrown position-header">For the post of "Human Resources Manager</h3>
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-sm-9 col-xs-9 padding-top">
+                <h3 class="darkbrown position-header">For the post of "{{jobTitle}}"</h3>
+                
+            </div>
+            <div class="col-xs-3 col-md-3 text-center padding-top">
+                <custom-toggle-button toggle-button-info="mtToggleButtonInfo"></custom-toggle-button>
+            </div>
+        </div>
         <hr>
     </div>
-    <hr>
-    <div class="col-sm-12 col-xs-12">
-        <p>#1 How many years of experience you have on the field of "Human Resources"?</p>
-        <input type="text"/> years
+    <div ng-repeat="question in questions" class="col-sm-12 col-xs-12">
+        <p>#{{$index + 1}} {{question.Question}}</p>
+        <span ng-repeat="input in question.Input">
+            <span ng-switch on="input.Element">
+                <span ng-switch-when="rating">
+                    <rating class="big-font" ng-model="rate" max="{{input.Limit}}" on-leave="overStar = null"></rating>
+                    <span class="big-font">| {{input.Value}}</span>
+                </span>
+                <span ng-switch-default="">
+                    <input name="{{question.QuestionName}}" type="{{input.Type}}"/> {{input.Label}}
+                </span>
+            </span>
+        </span>
         <hr>
-    </div>
-    
-    <div class="col-sm-12 col-xs-12 padding-bottom">
-        <p>#2 On the scale of 1 to 10, how would you mark your skill on something?"</p>
-        <rating class="big-font" ng-model="rate" max="max" on-leave="overStar = null"></rating>
-        <span class="big-font">| {{rate}}</span>
     </div>
 </div>
