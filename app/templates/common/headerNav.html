@@ -1,29 +1,32 @@
-<nav id="header" class="navbar navbar-default" role="navigation">
+<nav id="header" class="navbar navbar-default" role="navigation" ng-controller="headerNavCtrl">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="javascript:void(0)bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="../assets/images/logo.png"></a>
+            <a class="navbar-brand" href="javascript:void(0)"><img src="../assets/images/logo.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">            
-            <ul class="nav navbar-nav navbar-right">                
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" ng-show="isLoggedIn">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" role="button" aria-expanded="false">
-                        John Doe <img src="../assets/images/user.jpg"> <span class="caret"></span>
+                    <a href="javascript:void(0)" class="dropdown-toggle" role="button" aria-expanded="false">
+                        {{userInfo.user_name}} <img src="../assets/images/user.jpg"> <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="javascript:void(0)">Edit Profile</a></li>
+                        <li><a href="javascript:void(0)">User Management</a></li>
+                        <li><a href="javascript:void(0)">Settings</a></li>
+                        <li><a href="javascript:void(0)">Question Bank</a></li>
+                        <li><a href="javascript:void(0)">Job post Bank</a></li>
+                        <li><a href="javascript:void(0)">Professionals</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
                     </ul>
                 </li>                
             </ul>                    

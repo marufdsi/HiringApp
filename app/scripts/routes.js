@@ -1,7 +1,7 @@
 // UI-Router states
 app.states = {
     'index': {
-        url: '/',        
+        url: '/', 
         views: {
             '': {                
                 templateUrl: 'templates/layout/main.html'
@@ -16,7 +16,8 @@ app.states = {
         }
     },
     'jobs': {
-        url: '/jobs',        
+        url: '/jobs',
+        authRequired: true,
         views: {
             '': {                
                 templateUrl: 'templates/layout/main.html'
@@ -76,6 +77,7 @@ app.states = {
     },
     'candidates': {
         url: '/candidates',
+        authRequired: true,
         views: {
             '': { 
                 templateUrl: 'templates/layout/main.html' 

@@ -1,11 +1,12 @@
-app.controller('loginCtrl', ['$scope', 'authService', function( $scope, authService ){
+app.controller('loginCtrl', ['$scope', '$state', 'authService', function( $scope, $state, authService ){
     
     $scope.signin = function( form ){       
         
         form.submitted = true;
-        if( form.$valid ){
-            console.log( $scope.login );
-            authService.logIn( $scope.login );
+        if( form.$valid ){            
+            authService.logIn( $scope.login ).then(function(){
+            	$state.go('jobs');
+            });
         }                   
     }
     

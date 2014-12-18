@@ -1,14 +1,7 @@
-app.service('jobsService', ['$http', function( $http ){
+app.service('jobsService', ['baseService', function( baseService ){
     
-    this.service = 'api/jobs.json';
-    
-    this.load = function(){
-        return $http({
-            url: this.service,
-            method: 'GET'
-        });        
-    };
-    
-    return this;
+    baseService.service = 'jobs';
+
+    return baseService;
         
 }]);

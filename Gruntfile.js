@@ -124,7 +124,7 @@ module.exports = function(grunt){
     
     //  Defining development server taks
     grunt.registerTask('serve', ['express', 'watch']);        
-    grunt.registerTask('serve-dev', ['express', 'watch']);        
+    
     
     //  Defining Default Task
     grunt.registerTask('default', ['clean', 'concat', 'uglify', 'cssmin', 'copy:main', 'processhtml', 'htmlmin']);    

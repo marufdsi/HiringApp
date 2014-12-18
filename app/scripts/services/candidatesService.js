@@ -1,16 +1,8 @@
-'use strict';
-
-app.service('candidatesService', ['$http', function( $http ){
+app.service('candidatesService', ['baseService', function( baseService ){
+	'use strict';
         
-    this.service = 'api/candidates.json';
+    baseService.service = 'candidates';    
     
-    this.load = function(){
-        return $http({
-            url: this.service,
-            method: 'GET'
-        });
-    };
-    
-    return this;
+    return baseService;
         
 }]);
