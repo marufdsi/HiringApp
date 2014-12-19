@@ -1,7 +1,8 @@
-app.controller('jobsCtrl', ['$scope', 'departmentsService', 'jobs', function($scope, departmentsService, jobs){
+app.controller('jobsCtrl', ['$scope', 'departmentsService', 'jobsResolver', '$modal', function($scope, departmentsService, jobsResolver, $modal){
     
+    //  Initializing Models
     $scope.departments = [];
-    $scope.jobs = jobs.data.data; 
+    $scope.jobs = jobsResolver.data.data; 
     $scope.sortOrder = ['Date', 'Recruit End Date']; 
     $scope.sortSelected = 'Sort By Date'; 
     $scope.selectedDept = {'id': 0, 'department_name': 'All department'};

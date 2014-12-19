@@ -30,9 +30,9 @@ app.states = {
                 templateUrl: 'templates/jobs/jobs.html',
                 controller: 'jobsCtrl',
                 resolve: {
-                    jobs: function(jobsService){                          
+                    jobsResolver: ['jobsService', function(jobsService){                                                                          
                         return jobsService.load();
-                    }
+                    }]
                 }
             }
         }
@@ -50,18 +50,18 @@ app.states = {
                 templateUrl: 'templates/jobs/job.html',
                 controller: 'jobCtrl',
                 resolve: {
-                    job: function(jobService){                        
+                    job: ['jobService', function(jobService){                        
                         return jobService.load();
-                    }
+                    }]
                 }
             },
             'sidebar@job': {
                 templateUrl: 'templates/sidebar/jobSidebar.html',
                 controller: 'sidebarCtrl',
                 resolve: {
-                    job: function(jobService){                        
+                    job: ['jobService', function(jobService){                        
                         return jobService.load();
-                    }
+                    }]
                 }
             }
         }
@@ -79,9 +79,9 @@ app.states = {
                 templateUrl: 'templates/questionnaires/questionnaires.html',
                 controller: 'questionnairesCtrl',
                 resolve: {
-                    questions: function( questionnairesService ){                                                
+                    questions: ['questionnairesService', function( questionnairesService ){                                                
                         return questionnairesService.load();                        
-                    }
+                    }]
                 }
             }
         }
@@ -100,9 +100,10 @@ app.states = {
                 templateUrl: 'templates/candidates/candidates.html',
                 controller: 'candidatesCtrl',
                 resolve: {
-                    candidatesResolve: function( candidatesService ){                                                
+                    candidatesResolve: ['candidatesService', function( candidatesService ){                                                
+                        
                         return candidatesService.load();                        
-                    }
+                    }]
                 }
             }
         }

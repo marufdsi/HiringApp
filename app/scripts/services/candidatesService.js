@@ -1,8 +1,8 @@
 app.service('candidatesService', ['baseService', function( baseService ){
-	'use strict';
+    'use strict';
         
-    baseService.service = 'candidates';    
-    
-    return baseService;
+    return angular.copy(baseService, {    
+        service: 'candidates'
+    });
         
 }]);
