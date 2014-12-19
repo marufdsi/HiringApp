@@ -66,6 +66,28 @@ app.states = {
             }
         }
     },
+    'jobs.candidates': {
+        url: '/:id/candidates',
+        authRequired: true,
+        views: {
+            '': { 
+                templateUrl: 'templates/layout/main.html' 
+            },
+            'header': {
+                templateUrl: 'templates/common/headerNav.html'
+            },
+            'content': {
+                templateUrl: 'templates/candidates/candidates.html',
+                controller: 'candidatesCtrl',
+                resolve: {
+                    candidatesResolve: ['candidatesService', function( candidatesService ){                                                
+                        
+                        return candidatesService.load();                        
+                    }]
+                }
+            }
+        }
+    },
     'questionnaires': {
         url: '/job/:jobID/questionnaires',
         views: {
@@ -85,27 +107,5 @@ app.states = {
                 }
             }
         }
-    },
-    'candidates': {
-        url: '/candidates',
-        authRequired: true,
-        views: {
-            '': { 
-                templateUrl: 'templates/layout/main.html' 
-            },
-            'header@candidates': {
-                templateUrl: 'templates/common/headerNav.html'
-            },
-            'content@candidates': {
-                templateUrl: 'templates/candidates/candidates.html',
-                controller: 'candidatesCtrl',
-                resolve: {
-                    candidatesResolve: ['candidatesService', function( candidatesService ){                                                
-                        
-                        return candidatesService.load();                        
-                    }]
-                }
-            }
-        }
-    }
+    }    
 };

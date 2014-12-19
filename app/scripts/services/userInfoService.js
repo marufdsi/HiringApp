@@ -1,14 +1,16 @@
-app.service('userInfoService', ['baseService', function(baseService){
-	
-	baseService.service = 'userInfo';
+app.service('userInfoService', ['baseService', function(baseService) {
 
-	baseService.syncLoad = function(){
-		return $.ajax({
-			url: baseService._getService(),
-			async: false
-		});
-	};
+    'use strict';
 
-	return baseService;
+    angular.copy(baseService, this);
+
+    this.service = 'userInfo';
+
+    this.syncLoad = function() {
+        return $.ajax({
+            url: this._getService(),
+            async: false
+        });
+    };
 
 }]);
