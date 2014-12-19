@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ui.bootstrap', 'ui.router']);
+var app = angular.module('myApp', ['ui.bootstrap', 'ui.router', 'angular-loading-bar']);
 
 app.run(['$rootScope', '$state', 'appConfigFactory', 'eventsFactory', 'authService', function($rootScope, $state, appConfigFactory, eventsFactory, authService){        
 
