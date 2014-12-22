@@ -1,4 +1,4 @@
-app.factory('appConfigFactory', [function(){
+ app.factory('appConfigFactory', [function(){
     return {
         PROFILE_THUMB: 'assets/images/profile/thumb/',
         PROFILE_ICON: 'assets/images/profile/icon/',

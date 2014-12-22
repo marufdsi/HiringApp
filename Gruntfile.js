@@ -92,7 +92,8 @@ module.exports = function(grunt){
                     port: 4400,
                     hostname: '127.0.0.1',
                     bases: ['dist'],
-                    open: true,                    
+                    open: true,
+                    'express-keepalive': true
                 }
             }
         },
@@ -127,7 +128,7 @@ module.exports = function(grunt){
     //  Defining development server taks
     grunt.registerTask('serve', ['express:server', 'watch']);        
     grunt.registerTask('prod', ['clean:prod', 'concat', 'uglify', 'less:prod', 'cssmin', 'copy:prod', 'processhtml', 'htmlmin']);    
-    grunt.registerTask('prod-serve', ['prod', 'express:prod']);    
+    grunt.registerTask('prod-serve', ['prod', 'express:prod', 'express-keepalive']);    
     
     //  Defining Default Task
     grunt.registerTask('default', ['serve']);    
