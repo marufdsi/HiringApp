@@ -30,31 +30,25 @@ module.exports = function(grunt){
                 files: {
                     "app/assets/css/result.css": "app/assets/css/less/result.less"
                 }
+            },
+            prod: {
+                files: {
+                    "dist/assets/css/result.css": "app/assets/css/less/result.less"
+                }
             }
         },
         clean: {
-            main: {
+            prod: {
                 dist: ['dist/**/*']
-            },
-            dev: {
-                dist: ['build/**/*']
-            }
+            }            
         },
         copy: {            
-            main: {
+            prod: {
                 files: [                                    
                     {expand: true, cwd: 'app/api/', src: ['**'], dest: 'dist/api/'},                    
                     {expand: true, cwd: 'app/templates/', src: ['**'], dest: 'dist/templates/'},                    
                     {expand: true, cwd: 'app/assets/images/', src: ['**/*'], dest: 'dist/assets/images/'},                    
                     {expand: true, flatten: true, cwd: 'app/', src: ['*'], dest: 'dist/', filter: 'isFile'},                    
-                ]
-            },
-            dev: {
-                files: [
-                    {expand: true, cwd: 'app/api/', src: ['**'], dest: 'build/api/'},                    
-                    {expand: true, cwd: 'app/templates/', src: ['**'], dest: 'build/templates/'},                    
-                    {expand: true, cwd: 'app/assets/images/', src: ['**/*'], dest: 'build/assets/images/'},                    
-                    {expand: true, flatten: true, cwd: 'app/', src: ['*'], dest: 'build/', filter: 'isFile'},                    
                 ]
             }
         },        
@@ -92,6 +86,14 @@ module.exports = function(grunt){
                     open: true,
                     livereload: true
                 }
+            },
+            prod: {
+                options: {
+                    port: 4400,
+                    hostname: '127.0.0.1',
+                    bases: ['dist'],
+                    open: true,                    
+                }
             }
         },
         watch:{ //  For live Reload
@@ -123,10 +125,11 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-watch');
     
     //  Defining development server taks
-    grunt.registerTask('serve', ['express', 'watch']);        
-    
+    grunt.registerTask('serve', ['express:server', 'watch']);        
+    grunt.registerTask('prod', ['clean:prod', 'concat', 'uglify', 'less:prod', 'cssmin', 'copy:prod', 'processhtml', 'htmlmin']);    
+    grunt.registerTask('prod-serve', ['prod', 'express:prod']);    
     
     //  Defining Default Task
-    grunt.registerTask('default', ['clean', 'concat', 'uglify', 'cssmin', 'copy:main', 'processhtml', 'htmlmin']);    
+    grunt.registerTask('default', ['serve']);    
     
 };
