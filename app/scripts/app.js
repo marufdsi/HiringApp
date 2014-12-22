@@ -5,12 +5,13 @@ app.run(['$rootScope', '$state', 'appConfigFactory', 'eventsFactory', 'authServi
     //  Application configuration
     $rootScope.appConfig = appConfigFactory;
     $rootScope.events = eventsFactory;
+    $rootScope.pageTitle = appConfigFactory.DEFAULT_TITLE;
 
     //  Fetches user Data
     authService.fetchUserInfo();    
 
     //  Triggers upon route change
-    $rootScope.$on("$stateChangeStart", function(event, toState) {                
+    $rootScope.$on("$stateChangeStart", function(event, toState) {
         
         //  If route requires authentication & user is not logged in redirect to login page
         if( toState.authRequired && !authService.isLoggedIn() )  {
@@ -24,6 +25,18 @@ app.run(['$rootScope', '$state', 'appConfigFactory', 'eventsFactory', 'authServi
             $state.go('jobs');
         }
 
+        //  Changing page title, if there is any
+        if( toState.title )
+            $rootScope.pageTitle = toState.title;
+        else
+            $rootScope.pageTitle = appConfigFactory.DEFAULT_TITLE;
+
+    });
+
+    //  Event wise application behaviour
+    $rootScope.$on( $rootScope.events.LOG_OUT, function(){            
+        if( $state.current.authRequired )
+            $state.go('index');
     });
     
 }]);

@@ -1,4 +1,4 @@
-app.controller('jobsCtrl', ['$scope', 'departmentsService', 'jobsResolver', '$modal', function($scope, departmentsService, jobsResolver, $modal){
+app.controller('jobsCtrl', ['$scope', '$rootScope','departmentsService', 'jobsResolver', '$modal', function($scope, $rootScope, departmentsService, jobsResolver, $modal){
     
     //  Initializing Models
     $scope.departments = [];
@@ -22,5 +22,12 @@ app.controller('jobsCtrl', ['$scope', 'departmentsService', 'jobsResolver', '$mo
     $scope.fetchJobs = function(){
         alert('Fetching');
     }
+
+    /*
+    *   Events
+    */
+    $rootScope.$on( $rootScope.events.LOG_OUT, function(){            
+        console.log('Logget Out from jobs controller');
+    });
     
 }]);

@@ -16,7 +16,7 @@ app.controller('headerNavCtrl', ['$scope', '$rootScope', 'authService',function(
 	*	Events
 	*/
 	$rootScope.$on( $rootScope.events.LOG_OUT, function(){            
-            console.log('Logget Out');
+        console.log('Logget Out header controller');
 	});
 
 }]);

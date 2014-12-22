@@ -18,6 +18,7 @@ app.states = {
     },
     'jobs': {
         url: '/jobs',
+        title: 'HA | Job list',
         authRequired: true,
         views: {
             '': {                

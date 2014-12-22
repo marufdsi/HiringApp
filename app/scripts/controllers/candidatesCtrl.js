@@ -1,5 +1,5 @@
-app.controller('candidatesCtrl', ['$scope', 'candidatesResolve', 'appConfigFactory', '$modal', '$state', '$stateParams',
-    function( $scope, candidatesResolve, appConfigFactory, $modal, $state, $stateParams ){    
+app.controller('candidatesCtrl', ['$scope', '$rootScope', 'candidatesResolve', 'appConfigFactory', '$modal', '$state', '$stateParams',
+    function( $scope, $rootScope, candidatesResolve, appConfigFactory, $modal, $state, $stateParams ){    
     'use strict';
     
     $scope.candidates = candidatesResolve.data.data;
@@ -37,4 +37,12 @@ app.controller('candidatesCtrl', ['$scope', 'candidatesResolve', 'appConfigFacto
     $scope.backToPositionList = function(){
         $state.go('jobs');
     };
+
+    /*
+    *   Events
+    */
+    $rootScope.$on( $rootScope.events.LOG_OUT, function(){            
+        console.log('Logget Out from candidates controller');
+    });
+
 }]);
