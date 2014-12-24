@@ -28,7 +28,35 @@
 <div class="col-md-12 content-container">    
     <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
         
-        <div ng-include="'templates/jobs/_job_posts.html'"></div>
+        <div class="col-md-12 col-lg-12 col-sm-12 margin-bottom-10 margin-top-10">
+            <div class="dropdown pull-left">
+                <a href="javascript:void(0)" class="dropdown-toggle" id="dropdownMenu1" aria-expanded="true">
+                    {{selectedDept.department_name}}
+                    <span><i class="fa fa-chevron-down"></i></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li ng-repeat="d in departments">
+                        <a href="javascript:void(0)" ng-click="selectDepartment(d)">{{d.department_name}}</a>                
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown pull-right">
+                <a href="javascript:void(0)" class="dropdown-toggle" id="dropdownMenu1" aria-expanded="true">
+                    Sort By Date
+                    <span><i class="fa fa-chevron-down"></i></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li ng-repeat="s in sortOrder">
+                        <a href="javascript:void(0)" ng-click="sortBy(s)">{{s}}</a>                
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+
+            <hr/>
+        </div>
+        
+        <jobs-list model="jobs"></jobs-list>
         
     </div>
     <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
