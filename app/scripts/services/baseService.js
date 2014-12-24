@@ -21,18 +21,27 @@ app.service('baseService', ['$http', function($http) {
         this.load = function() {
             return $http({
                 url: this._getService(),
+                params: this.params,
                 method: this.method
             });
         };
 
         this.save = function() {
             //  Need to be implemented
-            alert('Not implemented yet');
+            return $http({
+                url: this._getService(),
+                params: this.params,
+                method: this.method
+            });
         };
 
         this.remove = function() {
             //	Need to be implemented
-            alert('Not implemented yet');
+            return $http({
+                url: this._getService(),
+                params: this.params,
+                method: this.method
+            });
         };
 
 

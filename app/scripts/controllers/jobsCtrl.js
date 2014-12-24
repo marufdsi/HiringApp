@@ -1,6 +1,7 @@
-app.controller('jobsCtrl', ['$scope', '$rootScope','departmentsService', 'jobsResolver', '$modal', function($scope, $rootScope, departmentsService, jobsResolver, $modal){
+app.controller('jobsCtrl', ['$scope', '$rootScope','departmentsService', 'jobsResolver', 'jobsService', '$modal', function($scope, $rootScope, departmentsService, jobsResolver, jobsService, $modal){
     
     //  Initializing Models
+    $scope.query = {};
     $scope.departments = [];
     $scope.jobs = jobsResolver.data.data; 
     $scope.sortOrder = ['Date', 'Recruit End Date']; 
@@ -10,19 +11,24 @@ app.controller('jobsCtrl', ['$scope', '$rootScope','departmentsService', 'jobsRe
     //	Fetching all departments       
     departmentsService.load().then(function( data ){    	
         $scope.departments = data.data.data;
-    });
+    });    
     
     //  actions
-    $scope.sortBy = function( selection ){
-        console.log( selection );
+    $scope.sortBy = function( selection ){        
+        $scope.query.sort = selection;
+        $scope.fetchJobs();
     };
     $scope.selectDepartment = function( dept ){
-        $scope.selectedDept = dept;
+        $scope.query.department = dept.id;        
+        $scope.fetchJobs();
     };
     $scope.fetchJobs = function(){
-        alert('Fetching');
+        jobsService.params = $scope.query;
+        jobsService.load().then(function(data){
+            $scope.jobs = data.data;
+        });
     }
-
+    
     /*
     *   Events
     */

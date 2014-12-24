@@ -48,7 +48,7 @@ app.states = {
                 templateUrl: 'templates/common/headerNav.html'
             },
             'content@job': {
-                templateUrl: 'templates/jobs/job.html',
+                templateUrl: 'templates/job/job.html',
                 controller: 'jobCtrl',
                 resolve: {
                     job: ['jobService', function(jobService){                        
@@ -67,8 +67,8 @@ app.states = {
             }
         }
     },
-    'jobs.candidates': {
-        url: '/:id/candidates',
+    'job.candidates': {
+        url: '/candidates',
         authRequired: true,
         views: {
             '': { 
@@ -78,28 +78,43 @@ app.states = {
                 templateUrl: 'templates/common/headerNav.html'
             },
             'content': {
-                templateUrl: 'templates/candidates/candidates.html',
+                templateUrl: 'templates/job/candidates/candidates.html',
                 controller: 'candidatesCtrl',
                 resolve: {
-                    candidatesResolve: ['candidatesService', function( candidatesService ){                                                
-                        
+                    candidatesResolve: ['candidatesService', function( candidatesService ){                        
                         return candidatesService.load();                        
                     }]
                 }
             }
         }
     },
-    'questionnaires': {
-        url: '/job/:jobID/questionnaires',
+    'job.candidate': {
+        url: '/candidate/:candidateID',
+        authRequired: true,
+        title: 'Candidates',
+        views: {
+            '': { 
+                templateUrl: 'templates/layout/main.html' 
+            },
+            'header': {
+                templateUrl: 'templates/common/headerNav.html'
+            },
+            'content': {
+                templateUrl: 'templates/job/candidate/candidate.html',                                
+            }
+        }
+    },
+    'job.questionnaires': {
+        url: '/questionnaires',
         views: {
             '': {                
                 templateUrl: 'templates/layout/main.html'
             },
-            'header@questionnaires': {
+            'header': {
                 templateUrl: 'templates/common/headerNav.html'
             },
-            'content@questionnaires': {
-                templateUrl: 'templates/questionnaires/questionnaires.html',
+            'content': {
+                templateUrl: 'templates/job/questionnaires/questionnaires.html',
                 controller: 'questionnairesCtrl',
                 resolve: {
                     questions: ['questionnairesService', function( questionnairesService ){                                                
