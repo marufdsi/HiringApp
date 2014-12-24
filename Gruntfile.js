@@ -16,6 +16,11 @@ module.exports = function(grunt){
                 files: {
                     'dist/scripts/built.min.js': ['dist/scripts/built.js']
                 }
+            },
+            template: {
+                files: {
+                    'dist/scripts/templates/templates-min.js': ['dist/scripts/templates/templates.js']
+                }
             }
         },
         cssmin: {
