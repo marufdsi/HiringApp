@@ -10,7 +10,7 @@
             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                 <h4>
                     <span class="light_gray margin-right-10 hidden-md hidden-lg">#{{c.rank}}</span>
-                    <a href="javascript:void(0)">{{c.candidate_name}}</a>
+                    <a ui-sref="job.candidate({candidateID: c.candidate_id})">{{c.candidate_name}}</a>
                 </h4>
                 <a href="javascript:void(0)">{{c.candidate_email}}</a>
                 <p class="margin-bottom-0">For <span class="red_heading">{{c.department}}</span></p>
@@ -19,7 +19,7 @@
                         <span class="resume">Not available</span>
                     </div>
                     <div ng-if='c.Resume != false'>
-                        <a href="{{candidate_resume_dir}}{{c.Resume}}" class="resume">Resume</a>
+                        <a ui-sref="job.candidate({candidateID: c.candidate_id})" class="resume">Resume</a>
                     </div>
                 </div>
                 

@@ -104,6 +104,38 @@ app.states = {
             }
         }
     },
+    'job.recommended': {
+        url: '/recommended',
+        authRequired: true,
+        title: 'Recommended',
+        views: {
+            '': { 
+                templateUrl: 'templates/layout/main.html' 
+            },
+            'header': {
+                templateUrl: 'templates/common/headerNav.html'
+            },
+            'content': {
+                templateUrl: 'templates/job/recommended/recommended.html',                                
+            }
+        }
+    },
+    'job.interviewed': {
+        url: '/interviewed',
+        authRequired: true,
+        title: 'Recommended',
+        views: {
+            '': { 
+                templateUrl: 'templates/layout/main.html' 
+            },
+            'header': {
+                templateUrl: 'templates/common/headerNav.html'
+            },
+            'content': {
+                templateUrl: 'templates/job/interviewed/interviewed.html',                                
+            }
+        }
+    },
     'job.questionnaires': {
         url: '/questionnaires',
         views: {

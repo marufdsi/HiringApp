@@ -2,7 +2,7 @@
     <div class="col-md-12 col-lg-12 col-sm-12 seperator-border-light margin-bottom-10" ng-repeat="posts in jobs">
         <div class="col-md-8 col-lg-8">
             <h4 class="margin-top-0">
-                <a href="#job/{{posts.id}}">{{posts.job_title}}</a>                
+                <a ui-sref="job({jobID: posts.id})" >{{posts.job_title}}</a>                
             </h4>
             <strong>{{posts.department}}</strong>
             <p class="light_gray margin-bottom-0">Posted: {{posts.post_date}}</p>
@@ -14,10 +14,10 @@
             </p>
         </div>
         <div class="col-md-4 col-lg-4 hidden-xs hidden-sm">
-            <p class="margin-bottom-10"><a href="javascript:void(0)" ng-click="totalInterviewed(posts)"><strong>{{posts.interviewed}}</strong> Interviewed</a></p>
+            <p class="margin-bottom-10"><a ui-sref="job.interviewed({jobID: posts.id})" ng-click="totalInterviewed(posts)"><strong>{{posts.interviewed}}</strong> Interviewed</a></p>
             <p class="margin-bottom-0 margin-top-10"><a href="javascript:void(0)"><strong>{{posts.called_for_interview}}</strong> called for interview</a></p>
-            <p class="margin-bottom-0"><a href="javascript:void(0)"><strong>{{posts.recommended}}</strong> Recommended</a></p>
-            <p class="margin-bottom-0"><a href="#/job/{{posts.id}}/candidates">total {{posts.total_applicant}} applicants</a></p>
+            <p class="margin-bottom-0"><a ui-sref="job.recommended({jobID: posts.id})"><strong>{{posts.recommended}}</strong> Recommended</a></p>            
+            <p class="margin-bottom-0"><a ui-sref="job({jobID: posts.id})" >total {{posts.total_applicant}} applicants</a></p>
         </div>        
     </div>
 </div>
