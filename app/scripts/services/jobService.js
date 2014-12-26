@@ -1,7 +1,9 @@
 app.service('jobService', ['baseService', function( baseService ){
     
-    baseService.service = 'job';
-
-    return baseService;
+    'use strict';
+    
+    angular.copy(baseService, this);
+    
+    this.service = 'job';    
         
 }]);

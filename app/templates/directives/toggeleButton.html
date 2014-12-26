@@ -3,6 +3,6 @@
         <span class="{{toggleButton.icon}}"></span> {{toggleButton.name}} <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
-        <li ng-repeat="listItem in toggleButton.listItems"><a href="{{listItem.link}}">{{listItem.name}}</a></li>                            
+        <li ng-repeat="listItem in toggleButton.listItems"><a href="javascript:void(0)" ng-click="listItem.clickAction()">{{listItem.name}}</a></li>                            
     </ul>
 </div>

@@ -41,6 +41,9 @@
  .big-font{
      font-size: 30px;
  }
+ .medium-font{
+     font-size: 20px;
+ }
  .social-icon{
      padding-top: 20px;
  }
@@ -154,4 +157,11 @@
 .btn-linkedin:active, .btn-linkedin:hover {
     background: #0b6087;
     color: #fff
+}
+.question-bank{
+    margin-top: 10px;
+    max-height: 150px;
+    min-height: 100px;
+    border: 1px solid black;
+    width: 100%;
 }
