@@ -3,18 +3,22 @@ app.service('baseService', ['$http', function($http) {
         'use strict';
 
         // Initialize variables
-        this.service = "";
+        this.host = "api";
 
-        this.version = "v1";
+        this.service = "";
+        
+        this.version = "/v1";
+
+        this.method = "GET";        
 
         this.params = {};
-
-        this.method = "GET";
+        
+        $http.defaults.headers.common['Auth-token'] = "Some Token";
 
 
         //  Internal Methods
         this._getService = function() {
-            return 'api/' + this.version + '/' + this.service + '.json';
+            return this.host + this.version + '/' + this.service + '.json';            
         };
 
         //  Default methods
@@ -22,7 +26,7 @@ app.service('baseService', ['$http', function($http) {
             return $http({
                 url: this._getService(),
                 params: this.params,
-                method: this.method
+                method: this.method                
             });
         };
 

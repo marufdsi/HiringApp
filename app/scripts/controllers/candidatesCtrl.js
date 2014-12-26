@@ -10,7 +10,6 @@ app.controller('candidatesCtrl', ['$scope', '$rootScope', 'candidatesResolve', '
     $scope.profile_icon = appConfigFactory.PROFILE_ICON;    
     
     
-    
     /**
      *      
      *  Actions

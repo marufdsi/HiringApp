@@ -81,7 +81,10 @@ app.states = {
                 templateUrl: 'templates/job/candidates/candidates.html',
                 controller: 'candidatesCtrl',
                 resolve: {
-                    candidatesResolve: ['candidatesService', function( candidatesService ){                        
+                    candidatesResolve: ['candidatesService', '$stateParams', function( candidatesService, $stateParams ){                                                                            
+                        candidatesService.params = {
+                            jobID: $stateParams.jobID
+                        };
                         return candidatesService.load();                        
                     }]
                 }

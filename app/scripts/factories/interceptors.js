@@ -3,8 +3,8 @@
  */
 app.factory('globalRequestInterceptor', [function() {
     return {    	
-        responseError: function(data){  
-            alert('OOPS...');
+        responseError: function(){  
+            console.error( 'Oops' );              
             return false;
         }
     };

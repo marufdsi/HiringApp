@@ -1,9 +1,9 @@
-app.service('candidatesService', ['baseService', function( baseService ){
+app.service('candidatesService', ['baseService', '$stateParams', function( baseService, $stateParams ){
     'use strict';
         
     angular.copy(baseService, this);
     
-    this.service = 'candidates';
+    this.service = 'candidates';    
     
         
 }]);

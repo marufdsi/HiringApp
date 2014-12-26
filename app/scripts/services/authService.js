@@ -27,6 +27,7 @@ app.service('authService', ['$http', '$rootScope', 'userInfoService', function( 
     this.fetchUserInfo = function(){
 
         userInfoService.syncLoad().done(function(data){
+            console.log( data );
             localStorage.removeItem('hiring_session');
             if( Object.getOwnPropertyNames(data).length )
                 localStorage.setItem("hiring_session", JSON.stringify( data ) );

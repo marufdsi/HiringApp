@@ -9,7 +9,7 @@ app.service('userInfoService', ['baseService', function(baseService) {
     this.syncLoad = function() {
         return $.ajax({
             url: this._getService(),
-            async: false
+            async: false            
         });
     };
 

@@ -42,7 +42,7 @@ app.run(['$rootScope', '$state', 'appConfigFactory', 'eventsFactory', 'authServi
 }]);
 
 app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($stateProvider, $urlRouterProvider, $httpProvider) {
-
+    
     $httpProvider.interceptors.push('globalRequestInterceptor');
 
     //  UI-Route
